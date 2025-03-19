@@ -50,4 +50,4 @@ for char, code in sorted(huffman_codes.items()):
     else:
         print(f"'{char}': {code}")
 
-print("Huffman Tree Root Frequency:", huffman_tree.freq)
+print("Huffman Tree Frequency:", huffman_tree.freq)
