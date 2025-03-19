@@ -9,7 +9,7 @@ def count_char_freq(file_path):
 
     return frequency
 
-file_path = "testfile.txt"
+file_path = "input.txt"
 
 char_frequencies = count_char_freq(file_path)
 
