@@ -31,23 +31,3 @@ def build_huffman_tree(freq_map):
         heapq.heappush(heap, new_node)
 
     return heap[0]
-
-file_path = "input.txt"
-with open(file_path, "r", encoding="utf-8") as f:
-    text = f.read()
-
-freq_map = Counter(text)
-
-huffman_tree = build_huffman_tree(freq_map)
-huffman_codes = build_codes(huffman_tree)
-
-print("Generated Huffman Codes:")
-for char, code in sorted(huffman_codes.items()):
-    if char == " ":
-        print(f"'SPACE': {code}")
-    elif char == "\n":
-        print(f"'NEWLINE': {code}")
-    else:
-        print(f"'{char}': {code}")
-
-print("Huffman Tree Frequency:", huffman_tree.freq)

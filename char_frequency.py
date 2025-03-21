@@ -8,19 +8,3 @@ def count_char_freq(file_path):
     frequency = Counter(text)
 
     return frequency
-
-file_path = "input.txt"
-
-char_frequencies = count_char_freq(file_path)
-
-print("Character Frequencies:")
-
-for char, freq in char_frequencies.items():
-    if char == " ":
-        print(f"'SPACE': {freq}")
-
-    elif char == "\n":
-        print(f"'NEWLINE': {freq}")
-
-    else:
-        print(f"'{char}': {freq}")
